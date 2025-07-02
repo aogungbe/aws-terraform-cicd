@@ -5,13 +5,17 @@ on:
     branches: [ main ]
   pull_request:
 # Runs automatically:
-  # Whenever you push to the main branch.
-  # Whenever a pull request is opened against main.
+#   Whenever you push to the main branch.
+#   Whenever a pull request is opened against main.
 jobs:
   terraform:
     runs-on: ubuntu-latest
 # Defines a job called terraform.
 # Runs the job on the latest Ubuntu runner (a fresh virtual machine provided by GitHub).
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+# It will use your secrets specified in Github for authentication.
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -20,17 +24,12 @@ jobs:
       uses: hashicorp/setup-terraform@v3
 # Installs Terraform in the runner so you can run terraform commands.
     - name: Terraform Init
-      run: Terraform Init
+      run: Terraform init
 # Runs terraform init to download plugins/providers (like the AWS provider).
     - name: Terraform Plan
       run: terraform plan
 # Runs terraform plan to show what changes would be made (but doesn’t actually create/change anything in AWS).
-
     - name: Terraform Apply
       run: terraform apply -auto-approve
-  env:
-    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
- # It would actually run terraform apply and create/update your AWS resources automatically
- # It will use your secrets specified in Github for authentication.
+# It would actually run terraform apply and create/update your AWS resources automatically
+ 
