@@ -46,12 +46,17 @@ This project demonstrates **cloud automation** using [Terraform](https://www.ter
 ---
 
 ## 💡 How to Use This Project
-
 1. **Fork or clone this repository**
-2. Set up your [AWS credentials as GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
-3. Edit the `main.tf` file as desired
-4. Commit and push to `main`
-5. Watch your AWS resources be built automatically!
+2. **Create an AWS IAM user** with programmatic access and permissions for EC2, S3, and VPC
+3. **Use `aws configure` locally** (optional, for your own tests)  
+   - Run `aws configure` and enter your AWS Access Key ID and Secret Access Key
+4. **Add your AWS credentials as GitHub Secrets**:  
+   - Go to your GitHub repo > Settings > Secrets and variables > Actions
+   - Add two secrets:  
+     - `AWS_ACCESS_KEY_ID`
+     - `AWS_SECRET_ACCESS_KEY`
+5. **Edit the `main.tf` file as desired**
+6. **Commit and push to `main`**
 
 ---
 
