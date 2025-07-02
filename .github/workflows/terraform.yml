@@ -24,7 +24,7 @@ jobs:
       uses: hashicorp/setup-terraform@v3
 # Installs Terraform in the runner so you can run terraform commands.
     - name: Terraform Init
-      run: Terraform init
+      run: terraform init
 # Runs terraform init to download plugins/providers (like the AWS provider).
     - name: Terraform Plan
       run: terraform plan
