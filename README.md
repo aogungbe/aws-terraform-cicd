@@ -29,12 +29,12 @@ This project demonstrates **cloud automation** using [Terraform](https://www.ter
 
 ## 🧩 Project Structure
 .
-├── main.tf # Main Terraform configuration
-├── .gitignore # Excludes Terraform state/cache
+├── main.tf                   # Main Terraform configuration
+├── .gitignore                # Excludes Terraform state/cache
 ├── .github/
-│ └── workflows/
-│ └── terraform.yml # GitHub Actions workflow
-└── README.md
+│   └── workflows/
+│       └── terraform.yml     # GitHub Actions workflow
+└── README.md                 # Project documentation
 
 ---
 
