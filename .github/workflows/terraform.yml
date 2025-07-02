@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 # Defines a job called terraform.
 # Runs the job on the latest Ubuntu runner (a fresh virtual machine provided by GitHub).
-  steps:
+    steps:
     - name: Checkout code
       uses: actions/checkout@v4
 # Pulls your repo’s code into the runner (so it can see your .tf files).
