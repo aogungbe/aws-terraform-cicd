@@ -63,4 +63,4 @@ This project demonstrates **cloud automation** using [Terraform](https://www.ter
 
 ## License
 
-MIT (or your choice)
+MIT
