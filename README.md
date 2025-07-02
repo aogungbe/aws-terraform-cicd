@@ -1,4 +1,4 @@
-# AWS Terraform CI/CD Demo
+# AWS CI/CD pipeline using Terraform and GitHub Actions
 
 This project demonstrates **cloud automation** using [Terraform](https://www.terraform.io/) and [GitHub Actions](https://docs.github.com/en/actions) to deploy and manage AWS infrastructure as code.
 
