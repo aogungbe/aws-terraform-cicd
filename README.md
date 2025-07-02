@@ -28,66 +28,6 @@ This project demonstrates **cloud automation** using [Terraform](https://www.ter
 ---
 
 ## 🧩 Project Structure
-# AWS Terraform CI/CD Demo
-
-This project demonstrates **cloud automation** using [Terraform](https://www.terraform.io/) and [GitHub Actions](https://docs.github.com/en/actions) to deploy and manage AWS infrastructure as code.
-
----
-
-## 🚀 What This Project Does
-
-- **Automates AWS resource creation** with Terraform
-- **Uses GitHub Actions** to run Terraform automatically on every push to `main`
-- **Provisions:**
-  - An EC2 instance (Amazon Linux 2)
-  - A Security Group (allowing SSH)
-  - An S3 bucket
-
----
-
-## 🏗️ How It Works
-
-1. **Edit Terraform code** (`main.tf`)
-2. **Push changes to GitHub**
-3. **GitHub Actions runs Terraform**:
-    - `terraform init` (initialize)
-    - `terraform plan` (preview)
-    - `terraform apply` (deploy)
-4. AWS resources are **created or updated automatically**
-
----
-
-## 🧩 Project Structure
-# AWS Terraform CI/CD Demo
-
-This project demonstrates **cloud automation** using [Terraform](https://www.terraform.io/) and [GitHub Actions](https://docs.github.com/en/actions) to deploy and manage AWS infrastructure as code.
-
----
-
-## 🚀 What This Project Does
-
-- **Automates AWS resource creation** with Terraform
-- **Uses GitHub Actions** to run Terraform automatically on every push to `main`
-- **Provisions:**
-  - An EC2 instance (Amazon Linux 2)
-  - A Security Group (allowing SSH)
-  - An S3 bucket
-
----
-
-## 🏗️ How It Works
-
-1. **Edit Terraform code** (`main.tf`)
-2. **Push changes to GitHub**
-3. **GitHub Actions runs Terraform**:
-    - `terraform init` (initialize)
-    - `terraform plan` (preview)
-    - `terraform apply` (deploy)
-4. AWS resources are **created or updated automatically**
-
----
-
-## 🧩 Project Structure
 .
 ├── main.tf # Main Terraform configuration
 ├── .gitignore # Excludes Terraform state/cache
@@ -115,32 +55,6 @@ This project demonstrates **cloud automation** using [Terraform](https://www.ter
 
 ---
 
-## 🛑 Destroying Resources
-
-> **Warning:** You are responsible for cleaning up resources to avoid unexpected AWS charges.  
-> To destroy everything, run `terraform destroy` manually, or set up a destroy workflow.
-
----
-
-## 📸 Screenshots / Example Output
-
-*_(Optional: Add screenshots of the Actions tab, a Terraform plan/apply log, or your AWS console.)_*
-
----
-
-## 💬 What You’ll Learn
-
-- **Infrastructure as Code (IaC)**
-- **CI/CD automation** for cloud infrastructure
-- **Troubleshooting real-world DevOps errors**
-
----
-
-## 👨‍💻 Author
-
-Your Name Here
-
----
 
 ## License
 
