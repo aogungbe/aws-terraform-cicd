@@ -1,8 +1,8 @@
 provider "aws" {
     region = "us-east-1"
 }
-resource "aws_security_group" "allow_ssh_eduwa"{
-    name = "allow_ssh_eduwa"
+resource "aws_security_group" "allow_ssh"{
+    name = "allow_ssh"
     description = "Allow inbound SSH traffic int the instance"
 
     ingress {
@@ -18,15 +18,15 @@ resource "aws_security_group" "allow_ssh_eduwa"{
         cidr_blocks = ["0.0.0.0/0"]
     }
 }
-resource "aws_instance" "test_eduwa" {
+resource "aws_instance" "test" {
     ami = "ami-0c6ebb5b9bce4ba15"
     instance_type = "t2.micro"
-    vpc_security_group_ids = [aws_security_group.allow_ssh_eduwa.id]
+    vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     tags = {
         Name = "terraform-demo"
     }
 }
 resource "aws_s3_bucket" "test-bucket" {
-    bucket = "eduwa-test-bucket1"
+    bucket = "subbys-test-bucket1"
     acl = "private"
 }
